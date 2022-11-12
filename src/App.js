@@ -13,6 +13,7 @@ function App() {
   }, [notes])
 
   useEffect(() => {
+    if (notes === []) return;
     setActiveNote(notes[0].id);
   }, [notes])
   const onAddNote = () => {
